@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Amardeep Maurya</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <nav id="navbar" class="scrolled">
+      <a href="index.html" class="nav-logo" style="text-decoration: none"
+        >THUNDER</a
+      >
+      <ul class="nav-links visible" id="navLinks">
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html" style="color: var(--gold)">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+
+    <section
+      id="section-contact"
+      class="page-section active"
+      style="display: block; padding-top: 140px"
+    >
+      <div class="section-bg"></div>
+      <a href="index.html" class="back-btn" style="text-decoration: none"
+        >← Back to Home</a
+      >
+      <div class="section-header">
+        <div class="section-eyebrow">// reach out</div>
+        <h1 class="section-title">Contact</h1>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-layout">
+        <div>
+          <div class="contact-info-title">Let's Build Something Together</div>
+          <p class="contact-info-text">
+            Available for freelance projects, full-time roles, and
+            collaborations. I typically respond within 24 hours.
+          </p>
+          <div class="contact-item">
+            <div class="contact-item-icon">📧</div>
+            <div class="contact-item-text">mauryaamardeep5264@gmail.com</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div class="contact-item-text">Varanasi, India</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">💼</div>
+            <div class="contact-item-text">
+              <a
+                style="color: rgba(255, 255, 255, 0.7); text-decoration: none"
+                href="https://www.linkedin.com/in/amardeep-maurya/"
+                target="_blank"
+                >LinkedIn Profile</a
+              >
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🐙</div>
+            <div class="contact-item-text">
+              <a
+                style="color: rgba(255, 255, 255, 0.7); text-decoration: none"
+                href="https://github.com/AAmardeep15"
+                target="_blank"
+                >Github Profile</a
+              >
+            </div>
+          </div>
+        </div>
+        <div>
+          <!-- Functional Formspree / FormSubmit integration -->
+          <form
+            action="https://formsubmit.co/mauryaamardeep5264@gmail.com"
+            method="POST"
+          >
+            <div class="form-group">
+              <label class="form-label">Your Name</label>
+              <input
+                class="form-input"
+                type="text"
+                name="name"
+                placeholder="Tony Stark"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input
+                class="form-input"
+                type="email"
+                name="email"
+                placeholder="tony@stark.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea
+                class="form-textarea"
+                name="message"
+                placeholder="I need someone to build a reactor..."
+                required
+              ></textarea>
+            </div>
+            <!-- Using standard form submit instead of JS alert to work properly with Formsubmit APIs -->
+            <button type="submit" class="submit-btn">Send Message ⚡</button>
+          </form>
+        </div>
+      </div>
+      <footer style="margin-top: 80px">
+        <span class="footer-logo">THUNDER</span>
+        <ul class="footer-links">
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <span class="footer-copy">© 2026 All Rights Reserved</span>
+      </footer>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
