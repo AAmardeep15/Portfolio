@@ -1,132 +1,120 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects | Amardeep Maurya</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <div class="cursor" id="cursor"></div>
-    <div class="cursor-ring" id="cursorRing"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Amardeep Maurya</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <nav id="navbar" class="scrolled">
-      <a href="index.html" class="nav-logo" style="text-decoration: none"
-        >THUNDER</a
-      >
-      <ul class="nav-links visible" id="navLinks">
-        <li><a href="projects.html" style="color: var(--gold)">Projects</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
+<body>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
-    <section
-      id="section-projects"
-      class="page-section active"
-      style="display: block; padding-top: 140px"
-    >
-      <div class="section-bg"></div>
-      <a href="index.html" class="back-btn" style="text-decoration: none"
-        >← Back to Home</a
-      >
-      <div class="section-header">
-        <div class="section-eyebrow">// my work</div>
-        <h1 class="section-title">Projects</h1>
-        <div class="section-line"></div>
-      </div>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-number">PROJECT // 001</div>
-          <div class="project-name">AI Obesity Detection System</div>
-          <p class="project-desc">
-            AI-Based Obesity Detection & Personalized Nutrition Recommendation
-            System
-          </p>
-          <div class="tech-tags">
-            <span class="tech-tag">Flask</span>
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Machine Learning</span>
-            <span class="tech-tag">Javascript</span>
-          </div>
-          <div class="project-links">
-            <button class="btn-link primary">Live Demo</button>
-            <button
-              class="btn-link"
-              onclick="
+  <nav id="navbar" class="scrolled">
+    <a href="index.html" class="nav-logo" style="text-decoration: none">THUNDER</a>
+    <ul class="nav-links visible" id="navLinks">
+      <li><a href="projects.html" style="color: var(--gold)">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <section id="section-projects" class="page-section active" style="display: block; padding-top: 140px">
+    <div class="section-bg"></div>
+    <a href="index.html" onclick="history.back(); return false;" class="back-btn" style="text-decoration: none">←
+      Back</a>
+    <div class="section-header">
+      <div class="section-eyebrow">// my work</div>
+      <h1 class="section-title">Projects</h1>
+      <div class="section-line"></div>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-number">PROJECT // 001</div>
+        <div class="project-name">AI Obesity Detection System</div>
+        <p class="project-desc">
+          AI-Based Obesity Detection & Personalized Nutrition Recommendation
+          System
+        </p>
+        <div class="tech-tags">
+          <span class="tech-tag">Flask</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Machine Learning</span>
+          <span class="tech-tag">Javascript</span>
+        </div>
+        <div class="project-links">
+          <button class="btn-link primary">Live Demo</button>
+          <button class="btn-link" onclick="
                 window.open(
                   'https://github.com/AAmardeep15/obesity-ai-detection',
                   '_blank',
                 )
-              "
-            >
-              GitHub
-            </button>
-          </div>
+              ">
+            GitHub
+          </button>
         </div>
-        <div class="project-card">
-          <div class="project-number">PROJECT // 002</div>
-          <div class="project-name">ALPHA-Fake-News-Detection</div>
-          <p class="project-desc">
-            ALPHA-Fake News Detection is an AI-based system that uses NLP and
-            BERT to automatically classify news articles as real or fake with
-            high accuracy.
-          </p>
-          <div class="tech-tags">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">NLP</span>
-            <span class="tech-tag">BERT</span>
-            <span class="tech-tag">Scikit-learn</span>
-          </div>
-          <div class="project-links">
-            <button class="btn-link primary">Live Demo</button>
-            <button
-              class="btn-link"
-              onclick="
+      </div>
+      <div class="project-card">
+        <div class="project-number">PROJECT // 002</div>
+        <div class="project-name">ALPHA-Fake-News-Detection</div>
+        <p class="project-desc">
+          ALPHA-Fake News Detection is an AI-based system that uses NLP and
+          BERT to automatically classify news articles as real or fake with
+          high accuracy.
+        </p>
+        <div class="tech-tags">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">NLP</span>
+          <span class="tech-tag">BERT</span>
+          <span class="tech-tag">Scikit-learn</span>
+        </div>
+        <div class="project-links">
+          <button class="btn-link primary">Live Demo</button>
+          <button class="btn-link" onclick="
                 window.open(
                   'https://github.com/AAmardeep15/ALPHA-Fake-News-Detection',
                   '_blank',
                 )
-              "
-            >
-              GitHub
-            </button>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-number">PROJECT // 003</div>
-          <div class="project-name">Project Zero (Placeholder)</div>
-          <p class="project-desc">
-            Placeholder description for your future works to edit here.
-          </p>
-          <div class="tech-tags">
-            <span class="tech-tag">Tech1</span>
-            <span class="tech-tag">Tech2</span>
-          </div>
-          <div class="project-links">
-            <button class="btn-link primary">Demo</button>
-            <button class="btn-link">GitHub</button>
-          </div>
+              ">
+            GitHub
+          </button>
         </div>
       </div>
-      <footer style="margin-top: 80px">
-        <span class="footer-logo">THUNDER</span>
-        <ul class="footer-links">
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-        <span class="footer-copy">© 2026 All Rights Reserved</span>
-      </footer>
-    </section>
+      <div class="project-card">
+        <div class="project-number">PROJECT // 003</div>
+        <div class="project-name">Project Zero (Placeholder)</div>
+        <p class="project-desc">
+          Placeholder description for your future works to edit here.
+        </p>
+        <div class="tech-tags">
+          <span class="tech-tag">Tech1</span>
+          <span class="tech-tag">Tech2</span>
+        </div>
+        <div class="project-links">
+          <button class="btn-link primary">Demo</button>
+          <button class="btn-link">GitHub</button>
+        </div>
+      </div>
+    </div>
+    <footer style="margin-top: 80px">
+      <span class="footer-logo">THUNDER</span>
+      <ul class="footer-links">
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <span class="footer-copy">© 2026 All Rights Reserved</span>
+    </footer>
+  </section>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>
