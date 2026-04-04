@@ -1,18 +1,26 @@
 // ── CUSTOM CURSOR ──
 const cursor = document.getElementById("cursor");
 const cursorRing = document.getElementById("cursorRing");
+const awakenBtn = document.getElementById("awakenBtn");
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+).matches;
 let mx = 0,
   my = 0,
   rx = 0,
   ry = 0;
 
-if (cursor && cursorRing) {
-  document.addEventListener("mousemove", (e) => {
-    mx = e.clientX;
-    my = e.clientY;
-    cursor.style.left = mx - 6 + "px";
-    cursor.style.top = my - 6 + "px";
-  });
+if (cursor && cursorRing && !prefersReducedMotion) {
+  document.addEventListener(
+    "mousemove",
+    (e) => {
+      mx = e.clientX;
+      my = e.clientY;
+      cursor.style.left = mx - 6 + "px";
+      cursor.style.top = my - 6 + "px";
+    },
+    { passive: true },
+  );
 
   function animateCursorRing() {
     rx += (mx - rx - 18) * 0.12;
@@ -43,56 +51,54 @@ if (navbar) {
   });
 }
 
-// ── FORCE BACK BUTTON TO HOME ──
-document.querySelectorAll(".back-btn").forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
-    window.location.assign("index.html");
-  });
-});
+if (awakenBtn) {
+  awakenBtn.addEventListener("click", triggerAwaken);
+}
 
 // ── LIGHTNING PARTICLES ──
 const canvas = document.getElementById("particles-canvas");
-if (canvas) {
+if (canvas && !prefersReducedMotion) {
   const ctx = canvas.getContext("2d");
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-  resizeCanvas();
-  window.addEventListener("resize", resizeCanvas);
+  if (ctx) {
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
 
-  const particles = [];
-  for (let i = 0; i < 60; i++) {
-    particles.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      size: Math.random() * 2 + 0.5,
-      speedX: (Math.random() - 0.5) * 0.4,
-      speedY: (Math.random() - 0.5) * 0.4,
-      opacity: Math.random() * 0.6 + 0.1,
-      color: Math.random() > 0.5 ? "#4fc3f7" : "#ffd700",
-    });
+    const particles = [];
+    for (let i = 0; i < 60; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: Math.random() * 2 + 0.5,
+        speedX: (Math.random() - 0.5) * 0.4,
+        speedY: (Math.random() - 0.5) * 0.4,
+        opacity: Math.random() * 0.6 + 0.1,
+        color: Math.random() > 0.5 ? "#4fc3f7" : "#ffd700",
+      });
+    }
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach((p) => {
+        p.x += p.speedX;
+        p.y += p.speedY;
+        if (p.x < 0) p.x = canvas.width;
+        if (p.x > canvas.width) p.x = 0;
+        if (p.y < 0) p.y = canvas.height;
+        if (p.y > canvas.height) p.y = 0;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.globalAlpha = p.opacity;
+        ctx.fill();
+      });
+      ctx.globalAlpha = 1;
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
   }
-  function animateParticles() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach((p) => {
-      p.x += p.speedX;
-      p.y += p.speedY;
-      if (p.x < 0) p.x = canvas.width;
-      if (p.x > canvas.width) p.x = 0;
-      if (p.y < 0) p.y = canvas.height;
-      if (p.y > canvas.height) p.y = 0;
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-      ctx.fillStyle = p.color;
-      ctx.globalAlpha = p.opacity;
-      ctx.fill();
-    });
-    ctx.globalAlpha = 1;
-    requestAnimationFrame(animateParticles);
-  }
-  animateParticles();
 }
 
 // ── AWAKEN SEQUENCE ──

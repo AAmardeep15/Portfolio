@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self'; connect-src 'self'; form-action 'self' https://formsubmit.co; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    />
+    <meta
       name="description"
       content="Portfolio of Amardeep Maurya, full-stack developer building modern web applications, AI projects, and scalable backend systems."
     />
@@ -25,9 +29,7 @@
 
     <!-- NAVBAR -->
     <nav id="navbar">
-      <a href="index.html" class="nav-logo" style="text-decoration: none"
-        >THUNDER</a
-      >
+      <a href="index.html" class="nav-logo no-underline">THUNDER</a>
       <ul class="nav-links" id="navLinks">
         <li><a href="projects.html">Projects</a></li>
         <li><a href="resume.html">Resume</a></li>
@@ -53,7 +55,7 @@
       <!-- AWAKEN button -->
       <div class="awaken-wrap" id="awakenWrap">
         <span class="awaken-label">click to begin</span>
-        <button class="awaken-btn" id="awakenBtn" onclick="triggerAwaken()">
+        <button class="awaken-btn" id="awakenBtn" type="button">
           ⚡ Awaken ⚡
         </button>
       </div>
@@ -91,6 +93,6 @@
       </div>
     </section>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

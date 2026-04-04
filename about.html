@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self'; connect-src 'self'; form-action 'self' https://formsubmit.co; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    />
+    <meta
       name="description"
       content="Learn more about Amardeep Maurya, a full-stack developer focused on clean architecture, performance, and modern web experiences."
     />
@@ -20,26 +24,18 @@
     <div class="cursor-ring" id="cursorRing"></div>
 
     <nav id="navbar" class="scrolled">
-      <a href="index.html" class="nav-logo" style="text-decoration: none"
-        >THUNDER</a
-      >
+      <a href="index.html" class="nav-logo no-underline">THUNDER</a>
       <ul class="nav-links visible" id="navLinks">
         <li><a href="projects.html">Projects</a></li>
         <li><a href="resume.html">Resume</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="about.html" style="color: var(--gold)">About</a></li>
+        <li><a href="about.html" class="nav-link-active">About</a></li>
       </ul>
     </nav>
 
-    <section
-      id="section-about"
-      class="page-section active"
-      style="display: block; padding-top: 140px"
-    >
+    <section id="section-about" class="page-section active page-section-offset">
       <div class="section-bg"></div>
-      <a href="index.html" class="back-btn" style="text-decoration: none"
-        >← Back</a
-      >
+      <a href="index.html" class="back-btn no-underline">← Back</a>
       <div class="section-header">
         <div class="section-eyebrow">// the person behind the code</div>
         <h1 class="section-title">About Me</h1>
@@ -75,18 +71,7 @@
             contributing to open source, or probably rewatching Marvel films for
             the 10th time.
           </p>
-          <div
-            style="
-              font-family: &quot;Orbitron&quot;, monospace;
-              font-size: 0.6rem;
-              letter-spacing: 4px;
-              color: var(--gold);
-              text-transform: uppercase;
-              margin-bottom: 16px;
-            "
-          >
-            Tech Stack
-          </div>
+          <div class="tech-stack-label">Tech Stack</div>
           <div class="skills-grid">
             <span class="skill-pill">React</span>
             <span class="skill-pill">Next.js</span>
@@ -106,7 +91,7 @@
           </div>
         </div>
       </div>
-      <footer style="margin-top: 80px">
+      <footer class="footer-spaced">
         <span class="footer-logo">THUNDER</span>
         <ul class="footer-links">
           <li><a href="projects.html">Projects</a></li>
@@ -118,6 +103,6 @@
       </footer>
     </section>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

@@ -31,6 +31,77 @@ a {
   color: inherit;
 }
 
+.no-underline {
+  text-decoration: none;
+}
+
+.nav-link-active {
+  color: var(--gold);
+}
+
+.page-section-offset {
+  display: block;
+  padding-top: 140px;
+}
+
+.footer-spaced {
+  margin-top: 80px;
+}
+
+.contact-link-muted {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+.tech-stack-label,
+.resume-skills-label {
+  font-family: "Orbitron", monospace;
+  font-size: 0.6rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.tech-stack-label {
+  letter-spacing: 4px;
+}
+
+.resume-skills-label {
+  letter-spacing: 3px;
+}
+
+.mb-14 {
+  margin-bottom: 14px;
+}
+
+.skill-w-95 {
+  width: 95%;
+}
+
+.skill-w-88 {
+  width: 88%;
+}
+
+.skill-w-80 {
+  width: 80%;
+}
+
+.skill-w-75 {
+  width: 75%;
+}
+
+.skill-w-68 {
+  width: 68%;
+}
+
+.sr-only {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 :focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 3px;

@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self'; connect-src 'self'; form-action 'self' https://formsubmit.co; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    />
+    <meta
       name="description"
       content="Resume and professional background of Amardeep Maurya, including education, experience, and core technical skills."
     />
@@ -20,12 +24,10 @@
     <div class="cursor-ring" id="cursorRing"></div>
 
     <nav id="navbar" class="scrolled">
-      <a href="index.html" class="nav-logo" style="text-decoration: none"
-        >THUNDER</a
-      >
+      <a href="index.html" class="nav-logo no-underline">THUNDER</a>
       <ul class="nav-links visible" id="navLinks">
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="resume.html" style="color: var(--gold)">Resume</a></li>
+        <li><a href="resume.html" class="nav-link-active">Resume</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
@@ -33,19 +35,16 @@
 
     <section
       id="section-resume"
-      class="page-section active"
-      style="display: block; padding-top: 140px"
+      class="page-section active page-section-offset"
     >
       <div class="section-bg"></div>
-      <a href="index.html" class="back-btn" style="text-decoration: none"
-        >← Back</a
-      >
+      <a href="index.html" class="back-btn no-underline">← Back</a>
       <div class="section-header">
         <div class="section-eyebrow">// credentials</div>
         <h1 class="section-title">Resume</h1>
         <div class="section-line"></div>
       </div>
-      <a href="contact.html" class="download-btn" style="text-decoration: none"
+      <a href="contact.html" class="download-btn no-underline"
         >✉ Request PDF Resume</a
       >
       <div class="resume-layout">
@@ -56,48 +55,37 @@
             Full Stack Dev + Machine learning enthusiast
           </div>
           <div class="skill-bar-wrap">
-            <div
-              style="
-                font-family: &quot;Orbitron&quot;, monospace;
-                font-size: 0.6rem;
-                letter-spacing: 3px;
-                color: var(--gold);
-                margin-bottom: 16px;
-                text-transform: uppercase;
-              "
-            >
-              Skills
-            </div>
-            <div style="margin-bottom: 14px">
+            <div class="resume-skills-label">Skills</div>
+            <div class="mb-14">
               <div class="skill-bar-label">
                 <span>React / Next.js</span><span>95%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-bar-fill" style="width: 95%"></div>
+                <div class="skill-bar-fill skill-w-95"></div>
               </div>
             </div>
-            <div style="margin-bottom: 14px">
+            <div class="mb-14">
               <div class="skill-bar-label">
                 <span>Node.js / Python</span><span>88%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-bar-fill" style="width: 88%"></div>
+                <div class="skill-bar-fill skill-w-88"></div>
               </div>
             </div>
-            <div style="margin-bottom: 14px">
+            <div class="mb-14">
               <div class="skill-bar-label">
                 <span>Cloud / DevOps</span><span>80%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-bar-fill" style="width: 80%"></div>
+                <div class="skill-bar-fill skill-w-80"></div>
               </div>
             </div>
-            <div style="margin-bottom: 14px">
+            <div class="mb-14">
               <div class="skill-bar-label">
                 <span>UI / UX Design</span><span>75%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-bar-fill" style="width: 75%"></div>
+                <div class="skill-bar-fill skill-w-75"></div>
               </div>
             </div>
             <div>
@@ -105,7 +93,7 @@
                 <span>Machine Learning</span><span>68%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-bar-fill" style="width: 68%"></div>
+                <div class="skill-bar-fill skill-w-68"></div>
               </div>
             </div>
           </div>
@@ -140,7 +128,7 @@
           </div>
         </div>
       </div>
-      <footer style="margin-top: 80px">
+      <footer class="footer-spaced">
         <span class="footer-logo">THUNDER</span>
         <ul class="footer-links">
           <li><a href="projects.html">Projects</a></li>
@@ -152,6 +140,6 @@
       </footer>
     </section>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

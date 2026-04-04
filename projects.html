@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self'; connect-src 'self'; form-action 'self' https://formsubmit.co; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    />
+    <meta
       name="description"
       content="Explore featured projects by Amardeep Maurya, including AI, machine learning, and full-stack web development work."
     />
@@ -20,11 +24,9 @@
     <div class="cursor-ring" id="cursorRing"></div>
 
     <nav id="navbar" class="scrolled">
-      <a href="index.html" class="nav-logo" style="text-decoration: none"
-        >THUNDER</a
-      >
+      <a href="index.html" class="nav-logo no-underline">THUNDER</a>
       <ul class="nav-links visible" id="navLinks">
-        <li><a href="projects.html" style="color: var(--gold)">Projects</a></li>
+        <li><a href="projects.html" class="nav-link-active">Projects</a></li>
         <li><a href="resume.html">Resume</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="about.html">About</a></li>
@@ -33,13 +35,10 @@
 
     <section
       id="section-projects"
-      class="page-section active"
-      style="display: block; padding-top: 140px"
+      class="page-section active page-section-offset"
     >
       <div class="section-bg"></div>
-      <a href="index.html" class="back-btn" style="text-decoration: none"
-        >← Back</a
-      >
+      <a href="index.html" class="back-btn no-underline">← Back</a>
       <div class="section-header">
         <div class="section-eyebrow">// my work</div>
         <h1 class="section-title">Projects</h1>
@@ -115,7 +114,7 @@
           </div>
         </div>
       </div>
-      <footer style="margin-top: 80px">
+      <footer class="footer-spaced">
         <span class="footer-logo">THUNDER</span>
         <ul class="footer-links">
           <li><a href="projects.html">Projects</a></li>
@@ -127,6 +126,6 @@
       </footer>
     </section>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
