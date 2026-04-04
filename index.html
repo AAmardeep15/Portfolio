@@ -1,91 +1,96 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Amardeep Maurya, full-stack developer building modern web applications, AI projects, and scalable backend systems."
+    />
+    <title>Amardeep Maurya | Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amardeep Maurya | Portfolio</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <body>
+    <!-- Custom cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
 
-<body>
-  <!-- Custom cursor -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
+    <!-- Screen flash -->
+    <div id="flash"></div>
 
-  <!-- Screen flash -->
-  <div id="flash"></div>
+    <!-- NAVBAR -->
+    <nav id="navbar">
+      <a href="index.html" class="nav-logo" style="text-decoration: none"
+        >THUNDER</a
+      >
+      <ul class="nav-links" id="navLinks">
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
 
-  <!-- NAVBAR -->
-  <nav id="navbar">
-    <a href="index.html" class="nav-logo" style="text-decoration: none">THUNDER</a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
+    <!-- HERO -->
+    <section id="hero">
+      <!-- Animation 1: idle -->
+      <video id="vid1" class="video-layer" autoplay loop muted playsinline>
+        <source src="animation_1.mp4" type="video/mp4" />
+      </video>
+      <!-- Animation 2: strike -->
+      <video id="vid2" class="video-layer" muted playsinline>
+        <source src="animation_2_.mp4" type="video/mp4" />
+      </video>
 
-  <!-- HERO -->
-  <section id="hero">
-    <!-- Animation 1: idle -->
-    <video id="vid1" class="video-layer" autoplay loop muted playsinline>
-      <source src="animation_1.mp4" type="video/mp4" />
-    </video>
-    <!-- Animation 2: strike -->
-    <video id="vid2" class="video-layer" muted playsinline>
-      <source src="animation_2_.mp4" type="video/mp4" />
-    </video>
+      <div class="hero-overlay"></div>
+      <canvas id="particles-canvas"></canvas>
 
-    <div class="hero-overlay"></div>
-    <canvas id="particles-canvas"></canvas>
-
-    <!-- AWAKEN button -->
-    <div class="awaken-wrap" id="awakenWrap">
-      <span class="awaken-label">click to begin</span>
-      <button class="awaken-btn" id="awakenBtn" onclick="triggerAwaken()">
-        ⚡ Awaken ⚡
-      </button>
-    </div>
-
-    <!-- 4 Navigation Boxes -->
-    <div id="nav-boxes">
-      <div class="nav-box" onclick="window.location.href = 'projects.html'">
-        <div class="corner tl"></div>
-        <div class="corner br"></div>
-        <div class="box-icon">⚙️</div>
-        <div class="box-title">Projects</div>
-        <div class="box-desc">My crafted works</div>
+      <!-- AWAKEN button -->
+      <div class="awaken-wrap" id="awakenWrap">
+        <span class="awaken-label">click to begin</span>
+        <button class="awaken-btn" id="awakenBtn" onclick="triggerAwaken()">
+          ⚡ Awaken ⚡
+        </button>
       </div>
-      <div class="nav-box" onclick="window.location.href = 'resume.html'">
-        <div class="corner tl"></div>
-        <div class="corner br"></div>
-        <div class="box-icon">📜</div>
-        <div class="box-title">Resume</div>
-        <div class="box-desc">Experience & skills</div>
-      </div>
-      <div class="nav-box" onclick="window.location.href = 'contact.html'">
-        <div class="corner tl"></div>
-        <div class="corner br"></div>
-        <div class="box-icon">⚡</div>
-        <div class="box-title">Contact</div>
-        <div class="box-desc">Let's connect</div>
-      </div>
-      <div class="nav-box" onclick="window.location.href = 'about.html'">
-        <div class="corner tl"></div>
-        <div class="corner br"></div>
-        <div class="box-icon">🛡️</div>
-        <div class="box-title">About</div>
-        <div class="box-desc">Who I am</div>
-      </div>
-    </div>
-  </section>
 
-  <script src="script.js"></script>
-</body>
+      <!-- 4 Navigation Boxes -->
+      <div id="nav-boxes">
+        <a class="nav-box" href="projects.html" aria-label="Open Projects page">
+          <div class="corner tl"></div>
+          <div class="corner br"></div>
+          <div class="box-icon">⚙️</div>
+          <div class="box-title">Projects</div>
+          <div class="box-desc">My crafted works</div>
+        </a>
+        <a class="nav-box" href="resume.html" aria-label="Open Resume page">
+          <div class="corner tl"></div>
+          <div class="corner br"></div>
+          <div class="box-icon">📜</div>
+          <div class="box-title">Resume</div>
+          <div class="box-desc">Experience & skills</div>
+        </a>
+        <a class="nav-box" href="contact.html" aria-label="Open Contact page">
+          <div class="corner tl"></div>
+          <div class="corner br"></div>
+          <div class="box-icon">⚡</div>
+          <div class="box-title">Contact</div>
+          <div class="box-desc">Let's connect</div>
+        </a>
+        <a class="nav-box" href="about.html" aria-label="Open About page">
+          <div class="corner tl"></div>
+          <div class="corner br"></div>
+          <div class="box-icon">🛡️</div>
+          <div class="box-title">About</div>
+          <div class="box-desc">Who I am</div>
+        </a>
+      </div>
+    </section>
 
+    <script src="script.js"></script>
+  </body>
 </html>
